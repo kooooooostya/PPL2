@@ -24,24 +24,28 @@ public class Triangle extends GeometricFigure{
         return mPointC;
     }
 
+    //sets a new value if the value is correct
     public void setPointAIfCorrect(Point pointA) {
         mPointA = pointA;
     }
-
+    //sets a new value if the value is correct
     public void setPointBIfCorrect(Point pointB) {
         mPointB = pointB;
     }
-
+    //sets a new value if the value is correct
     public void setPointCIfCorrect(Point pointC) {
         mPointC = pointC;
     }
 
+    //returns the length of side AB
     public double getLengthAB(){
         return new Segment(mPointA, mPointB).getLength();
     }
+    //returns the length of side AC
     public double getLengthAC(){
         return new Segment(mPointA, mPointC).getLength();
     }
+    //returns the length of side BC
     public double getLengthBC(){
         return new Segment(mPointB, mPointC).getLength();
     }

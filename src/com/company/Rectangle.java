@@ -62,11 +62,13 @@ public class Rectangle extends GeometricFigure {
         return new Segment(mPointC, mPointD).getLength();
     }
 
+    //returns perimeter of rectangle
     @Override
     public double getPerimeter() {
         return getLengthAB() + getLengthBC() + getLengthAD() + getLengthCD();
     }
 
+    //returns area of rectangle using formula S = AD * CD * sinADC
     @Override
     public double getArea() {
         double diagonal = new Segment(mPointA, mPointC).getLength();

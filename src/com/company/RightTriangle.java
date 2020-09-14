@@ -15,6 +15,7 @@ public class RightTriangle extends Triangle{
             throw new Exception("Ошибка, данный треугольник не является прямоугольным");
     }
 
+
     private boolean checkTriangleIsRight(){
         double[] sides = getLegsAndHypotenuse();
         return Math.pow(sides[2], 2) != Math.pow(sides[0], 2) + Math.pow(sides[1], 2);
@@ -38,6 +39,7 @@ public class RightTriangle extends Triangle{
         return new double[]{leg1Length, leg2Length, hypotenuseLength};
     }
 
+    //sets a new value if the value is correct
     @Override
     public void setPointAIfCorrect(Point pointA){
         Point a = this.getPointA();
@@ -47,6 +49,7 @@ public class RightTriangle extends Triangle{
             this.setPointAIfCorrect(a);
 
     }
+    //sets a new value if the value is correct
     @Override
     public void setPointBIfCorrect(Point pointB){
         Point b = this.getPointB();
@@ -56,6 +59,7 @@ public class RightTriangle extends Triangle{
             this.setPointAIfCorrect(b);
 
     }
+    //sets a new value if the value is correct
     @Override
     public void setPointCIfCorrect(Point pointC){
         Point c = this.getPointC();
@@ -66,6 +70,7 @@ public class RightTriangle extends Triangle{
 
     }
 
+    // returns area using formula S = 1/2 * leg1 * leg2
     @Override
     public double getArea() {
         double[] legs = getLegsAndHypotenuse();

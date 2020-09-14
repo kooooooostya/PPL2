@@ -25,6 +25,7 @@ public class Segment {
         mEndPoint = endPoint;
     }
 
+    //finds length of segment using formula: L = sqrt((x1-x2)^2 + (y1 - y2)^2)
     public double getLength(){
         return Math.sqrt(Math.pow(mStartPoint.getX() - mEndPoint.getX(), 2) +
                 Math.pow(mStartPoint.getY() - mEndPoint.getY(), 2));
