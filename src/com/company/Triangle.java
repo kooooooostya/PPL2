@@ -24,15 +24,15 @@ public class Triangle extends GeometricFigure{
         return mPointC;
     }
 
-    public void setPointA(Point pointA) {
+    public void setPointAIfCorrect(Point pointA) {
         mPointA = pointA;
     }
 
-    public void setPointB(Point pointB) {
+    public void setPointBIfCorrect(Point pointB) {
         mPointB = pointB;
     }
 
-    public void setPointC(Point pointC) {
+    public void setPointCIfCorrect(Point pointC) {
         mPointC = pointC;
     }
 

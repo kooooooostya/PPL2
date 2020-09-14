@@ -39,6 +39,34 @@ public class RightTriangle extends Triangle{
     }
 
     @Override
+    public void setPointAIfCorrect(Point pointA){
+        Point a = this.getPointA();
+
+        super.setPointAIfCorrect(pointA);
+        if(checkTriangleIsRight())
+            this.setPointAIfCorrect(a);
+
+    }
+    @Override
+    public void setPointBIfCorrect(Point pointB){
+        Point b = this.getPointB();
+
+        super.setPointAIfCorrect(pointB);
+        if(checkTriangleIsRight())
+            this.setPointAIfCorrect(b);
+
+    }
+    @Override
+    public void setPointCIfCorrect(Point pointC){
+        Point c = this.getPointC();
+
+        super.setPointAIfCorrect(pointC);
+        if(checkTriangleIsRight())
+            this.setPointAIfCorrect(c);
+
+    }
+
+    @Override
     public double getArea() {
         double[] legs = getLegsAndHypotenuse();
         return legs[0] * legs[1] / 2;
